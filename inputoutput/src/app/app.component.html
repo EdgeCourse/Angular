@@ -1,0 +1,39 @@
+ <div class="app">
+ 
+ <!--<app-counter [count]="initialCount"></app-counter>-->
+	<!--your public property names to differ from the internal input names-->
+	<!--<app-counter [init]="initialCount"></app-counter>-->
+	
+<!--listen in the parent for when a value changes inside our child component-->
+	
+   
+	
+ </div>
+ 
+ <!--
+ Changed initialCount to myCount, we are no longer setting an “initialCount”, therefore the count state will be managed in the parent once the child component makes a change to it
+Created a custom change property to the <counter> template, using () event binding syntax, like we learned when we created our first component this signifies some kind of event (such as a click when used on a native element Node).
+Logged the myCount property in the parent
+Added a countChange() {} method to the class, and passed it into the (change) event listener
+
+uni-directional dataflow. The data flows down from the AppComponent class, into the ``, the counter can then change the values - and once the value has changed we expect countChange() to be called
+
+ -->
+ <!--
+  <div class="app">
+      Parent: {{ myCount }}
+      <counter
+        [count]="myCount"
+        (change)="countChange($event)">
+      </counter>
+    </div>
+	-->
+	<!--
+  <div class="app">
+      Parent: {{ myCount }}
+      <counter
+        [count]="myCount"
+        (change)="countChange($event)">
+      </counter>
+    </div>
+	-->
