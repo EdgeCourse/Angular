@@ -1,0 +1,32 @@
+<!--
+<p>Salary: {{salary | currency}}</p>
+
+<div>{{birthday|date:"M-dd-yyyy"}}</div> 
+
+<div>{{65.243| number: '3.2-4'}}</div>
+-->
+<div>{{23.456 | frcurrency}}</div>
+<div>{{237365.4564546 | frnum}}</div>
+<h3>Pure & Impure Pipes</h3>  
+ <h4>Pets Unfiltered</h4>
+ 
+  <ng-container *ngFor="let x of pets">
+  {{x.type}}
+  <input type="checkbox" [(ngModel)]="x.favorite">
+  <br>
+  </ng-container>
+ <h4>Favorite Pets</h4>
+
+  <ng-container *ngFor="let x of pets | favorite">
+  {{x.type}}
+  <input type="checkbox" disabled [(ngModel)]="x.favorite">
+  <br>
+  </ng-container>
+  
+  
+
+ 
+ 
+
+ 
+  
