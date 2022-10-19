@@ -1,0 +1,31 @@
+<form [formGroup]="myForm" ngSubmit)="saveForm(myForm)">
+  <div>
+    <label>
+      Username:
+      <input formControlName="userName" placeholder="Your username">
+    </label>
+    <div *ngIf="(
+                 myForm.get('userName').dirty ||
+                 myForm.get('userName').touched
+                ) &&
+                myForm.get('userName').invalid"
+    >
+      Please provide your username.
+    </div>
+  </div>
+  <div>
+    <label>
+      Website URL:
+      <input formControlName="websiteUrl" placeholder="Your website">
+    </label>
+    <div
+      *ngIf="(
+              myForm.get('websiteUrl').dirty ||
+              myForm.get('websiteUrl').touched
+             ) &&
+             myForm.get('websiteUrl').invalid"
+      >
+      Only URLs served over HTTPS and from the .io top-level domain are accepted.
+    </div>
+  </div>
+</form>
