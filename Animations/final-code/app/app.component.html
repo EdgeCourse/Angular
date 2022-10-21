@@ -1,0 +1,10 @@
+﻿<div class="navbar" *ngIf="currentUser">
+	<a class="btn btn-link" (click)="logout()">Logout</a>
+</div>
+<!-- main app container -->
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
+
+
